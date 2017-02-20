@@ -1,0 +1,32 @@
+{
+  "name": "hypernode",
+  "version": "0.0.0",
+  "description": "hypernode, scalable JS applications",
+  "main": "dist/hypernode.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint src/**/*",
+    "test": "mocha --compilers js:babel-register src/**/*.spec.js",
+    "build": "babel src -d dist --source-maps inline",
+    "make": "npm run lint && npm run clean && npm run build && npm run test"
+  },
+  "repository": "git@github.com:elierotenberg/hypernode",
+  "author": "Elie Rotenberg <elie@rotenberg.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-latest": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.6.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "bluebird": "^3.4.7",
+    "redis": "^2.6.5",
+    "uuid": "^3.0.1"
+  }
+}

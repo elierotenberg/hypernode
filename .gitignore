@@ -1,0 +1,5 @@
+node_modules
+*.pid
+npm-debug.log
+dist
+yarn-error.log
